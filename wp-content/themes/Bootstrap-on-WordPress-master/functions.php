@@ -255,3 +255,11 @@
 			<?php endif;
 		}
 	}
+
+	add_role('company', 'Company', [
+		'manage_options' => false,
+	]);
+
+	add_role('employee', 'Employee', [
+		'manage_options' => false,
+	]);
