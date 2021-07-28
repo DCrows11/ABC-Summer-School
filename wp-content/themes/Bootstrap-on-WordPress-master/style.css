@@ -11,13 +11,17 @@ Tags: 			babobski, bootstrap, basic theme
 .ur-submit-button:hover {
     background: lightblue;
 }
-.Logo
-{
-	height: 246px;
-	left: 770px;
+
+body.theme-Bootstrap-on-WordPress-master {
+    background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/LNLBACKGROUND.svg");
+    background-size: cover;
+}
+
+.Logo {
 	position: absolute;
+	left: 770px;
 	top: 169px;
 	width: 337px;
+	height: 246px;
 	z-index: 12;
 }
-    
