@@ -18,7 +18,7 @@
 	'parts/shared/html-header', 
 ) ); ?>
 
-<div class="content">
+<!-- <div class="content">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 		<h2>
@@ -28,29 +28,32 @@
 		<?php comments_template( '', true ); ?>
 
 	<?php endwhile; ?>
-</div>
+</div> -->
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Customer</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Employee</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Seller</button>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><?php 
-  echo do_shortcode('[user_registration_form id="17"]');
-  ?></div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><?php 
-  echo do_shortcode('[user_registration_form id="44"]');
-  ?></div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><?php 
-  echo do_shortcode('[user_registration_form id="43"]');
-  ?></div>
+<div id="register-form-rectangle">
+  <div id="black-rectangle-register-form"></div>
+  <ul class="nav nav-tabs" id="register-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="customer-tab" data-bs-toggle="tab" data-bs-target="#customer" type="button" role="tab" aria-controls="customer" aria-selected="true">Customer</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link register-form-tab" id="employee-tab" data-bs-toggle="tab" data-bs-target="#employee" type="button" role="tab" aria-controls="employee" aria-selected="false">Employee</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link register-form-tab" id="company-tab" data-bs-toggle="tab" data-bs-target="#company" type="button" role="tab" aria-controls="company" aria-selected="false">Seller</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="register-tab-content">
+    <div class="tab-pane fade show active" id="customer" role="tabpanel" aria-labelledby="customer-tab"><?php 
+    echo do_shortcode('[user_registration_form id="17"]');
+    ?></div>
+    <div class="tab-pane fade" id="employee" role="tabpanel" aria-labelledby="employee-tab"><?php 
+    echo do_shortcode('[user_registration_form id="44"]');
+    ?></div>
+    <div class="tab-pane fade" id="company" role="tabpanel" aria-labelledby="company-tab"><?php 
+    echo do_shortcode('[user_registration_form id="43"]');
+    ?></div>
+  </div>
 </div>
 
 

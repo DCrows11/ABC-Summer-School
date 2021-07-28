@@ -8,13 +8,176 @@ Author URI: 	https://www.babobski.nl
 Tags: 			babobski, bootstrap, basic theme
 */
 
-.ur-submit-button:hover {
-    background: lightblue;
-}
-
+/* Site background */
 body.theme-Bootstrap-on-WordPress-master {
     background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/LNLBACKGROUND.svg");
     background-size: cover;
+}
+/* The rectangle containing the form, the user type options, and the design elements */
+#register-form-rectangle {
+    position: relative;
+    width: 48vw;
+    height: 85vh;
+    left: 17.5vw;
+    top: 10vh;
+    border: none;
+}
+/* Registration form */
+.formular-custom {
+    position: absolute;
+    background-color: rgb(254, 193, 6);
+    box-shadow: 0px 9px 27px 0px rgba(125, 125, 124, 0.61);
+    bottom: 0px;
+    right: 0px;
+    width: 89%;
+    height: 94%;
+    border: none;
+    padding: 0px;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+/* Form fields */
+.ur-frontend-field {
+    border: 2px solid black;
+    background-color: rgb(254, 193, 6);
+}
+.ur-frontend-field::placeholder {
+    opacity: 1;
+    font-weight: bold;
+    font-size: 1em;
+}
+#user_email::placeholder {
+    color: rgb(255, 229, 153)
+}
+#user_login::placeholder {
+    color: rgb(255, 229, 153)
+}
+#user_pass::placeholder {
+    color: rgb(255, 229, 153)
+}
+#user_confirm_password::placeholder {
+    color: rgb(255, 229, 153)
+}
+#user_email {
+  border-radius: 1vh;
+}
+#user_login {
+  border-radius: 1vh;
+}
+#user_pass {
+  border-radius: 1vh;
+}
+#user_confirm_password {
+  border-radius: 1vh;
+}
+/* Register form field spacing */
+#register-form-custom-rows-design {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    top: 19%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+
+}
+/* .register {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    top: 19%;
+    left: 5%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+
+} */
+/* Removing some random border */
+.nav-tabs {
+    border: none;
+}
+/* Submit button */
+#register-form-submit-button {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    font-weight: bold;
+    width: 27%;
+    height: 7.6%;
+    background-color: rgb(254, 193, 6);
+    border: 1.5px solid black;
+    font-size: 4vh;
+    padding: 0px;
+    min-width: 150px;
+    /* padding-top: 0vh;
+    padding-right: 0vh;
+    padding-bottom: 1vh;
+    padding-left: 0vh; */
+    box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+}
+/* TO BE ADDED
+    button animations
+*/
+/* #register-form-submit-button:hover {
+    
+} */
+/* User type select tabs */
+#customer-tab {
+    position: absolute;
+    background-color: rgb(12, 20, 28);
+    width: 15%;
+    height: 6%;
+    padding: 0px;
+    min-width: 30px;
+    top: 0%;
+    right: 30%;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+#employee-tab {
+    position: absolute;
+    background-color: rgb(12, 20, 28);
+    width: 15%;
+    height: 6%;
+    padding: 0px;
+    min-width: 30px;
+    top: 0%;
+    right: 15%;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+#company-tab {
+    position: absolute;
+    background-color: rgb(12, 20, 28);
+    width: 15%;
+    height: 6%;
+    padding: 0px;
+    min-width: 30px;
+    top: 0%;
+    right: 0%;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+/* Black rectangle next to register form, for design purposes */
+#black-rectangle-register-form {
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color: rgb(12, 20, 28);
+    box-shadow: 0px 9px 27px 0px rgba(12, 20, 28, 0.26);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 11%;
+    height: 94%;
+    z-index: 2;
 }
 
 .Logo {

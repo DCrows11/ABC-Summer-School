@@ -66,7 +66,7 @@ do_action( 'user_registration_before_registration_form', $form_id );
 				$row_id = ( ! empty( $row_ids ) ) ? absint( $row_ids[ $index ] ) : $index;
 				do_action( 'user_registration_before_field_row', $row_id, $form_data_array, $form_id );
 				?>
-						<div class='ur-form-row'>
+						<div class='ur-form-row' id='register-form-custom-rows-design'>
 						<?php
 							$width = floor( 100 / count( $data ) ) - count( $data );
 
@@ -134,7 +134,7 @@ do_action( 'user_registration_before_registration_form', $form_id );
 						$submit_btn_class = apply_filters( 'user_registration_form_submit_btn_class', array(), $form_id );
 						$submit_btn_class = array_merge( $submit_btn_class, (array) ur_get_form_setting_by_key( $form_id, 'user_registration_form_setting_form_submit_class' ) );
 						?>
-						<button type="submit" class="btn button ur-submit-button <?php echo esc_attr( implode( ' ', $submit_btn_class ) ); ?>">
+						<button type="submit" class="btn button ur-submit-button <?php echo esc_attr( implode( ' ', $submit_btn_class ) ); ?>" id="register-form-submit-button">
 							<span></span>
 							<?php
 							$submit = ur_get_form_setting_by_key( $form_id, 'user_registration_form_setting_form_submit_label' );
