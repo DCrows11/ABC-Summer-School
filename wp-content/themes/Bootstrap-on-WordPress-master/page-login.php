@@ -34,3 +34,5 @@
 	'parts/shared/footer',
 	'parts/shared/html-footer' 
 ) ); ?>
+  <div class="Logo"></div> 
+  <img src="lockednloaded.svg" class="Logo">
