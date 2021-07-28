@@ -12,5 +12,227 @@ Tags: 			babobski, bootstrap, basic theme
     background: lightblue;
 }
 
+.Backgound_Field_BOX
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 13;
+}
+.Logo
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 12;
+}
+.Rectangle_2
+{
+	background-color: rgb(12, 20, 28);
+	border-color: rgb(0, 0, 0);
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 9px 27px 0 rgba(12, 20, 28, 0.26);
+	height: 625px;
+	left: 626px;
+	position: absolute;
+	top: 263px;
+	width: 104px;
+	z-index: 8;
+}
+.Rectangle_1
+{
+	background-color: rgb(255, 193, 5);
+	box-shadow: 0 9px 27px 0 rgba(125, 125, 124, 0.61);
+	height: 626px;
+	left: 701px;
+	position: absolute;
+	top: 264px;
+	width: 518px;
+	z-index: 7;
+}
 
+
+.Username
+{
+	color: rgba(255, 255, 255, 0.459);
+	font-family: "Raleway";
+	font-size: 36px;
+	font-weight: bold;
+	left: 775.484px;
+	line-height: 1.111;
+	position: absolute;
+	top: 450.502px;
+	z-index: 22;
+}
+.User_Icon
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 20;
+}
+.User_Outer_Field
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 17;
+}
+.Rounded_Rectangle_1
+{
+	border-color: rgb(12, 20, 28);
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1.87px;
+	box-shadow: 0 9px 27px 0 rgba(12, 20, 28, 0.26);
+	height: 68.26px;
+	left: 763px;
+	position: absolute;
+	top: 434px;
+	width: 424.26px;
+	z-index: 16;
+}
+.Field__Password
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 38;
+}
+.PASSWORD_Forgot
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 37;
+}
+.Forgot_Your_Password_
+{
+	color: rgb(12, 20, 28);
+	font-family: "Raleway";
+	font-size: 18px;
+	font-weight: bold;
+	left: 770.562px;
+	line-height: 2.222;
+	position: absolute;
+	top: 719.612px;
+	z-index: 36;
+}
+.PASSWORD
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 34;
+}
+.Password
+{
+	color: rgba(255, 255, 255, 0.459);
+	font-family: "Raleway";
+	font-size: 36px;
+	font-weight: bold;
+	left: 778.125px;
+	line-height: 1.111;
+	position: absolute;
+	top: 628.002px;
+	z-index: 33;
+}
+.Key_Icon
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 31;
+}
+.Password_Outer_Field
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 28;
+}
+.Rounded_Rectangle_1
+{
+	border-color: rgb(12, 20, 28);
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1.87px;
+	box-shadow: 0 9px 27px 0 rgba(12, 20, 28, 0.26);
+	height: 68.26px;
+	left: 763px;
+	position: absolute;
+	top: 612px;
+	width: 424.26px;
+	z-index: 27;
+}
+.Lower_Box_Text
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 46;
+}
+.Create_Account
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 45;
+}
+.New_around_here__Create_an_Account
+{
+	color: rgb(12, 20, 28);
+	font-family: "Raleway";
+	font-size: 18px;
+	font-weight: bold;
+	left: 797.562px;
+	line-height: 2.222;
+	position: absolute;
+	top: 812.502px;
+	z-index: 44;
+}
+.Terms_and_Conds
+{
+	height: 1080px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1920px;
+	z-index: 42;
+}
+.Terms_and_Conditions
+{
+	color: rgb(12, 20, 28);
+	font-family: "Raleway";
+	font-size: 18px;
+	font-weight: bold;
+	left: 864.734px;
+	line-height: 2.222;
+	position: absolute;
+	top: 779.502px;
+	z-index: 41;
+}
 
