@@ -31,6 +31,7 @@
 </div> -->
 
 <div id="register-form-rectangle">
+  <div id="register-form-logo"></div>
   <div id="black-rectangle-register-form"></div>
   <ul class="nav nav-tabs" id="register-tab" role="tablist">
     <li class="nav-item" role="presentation">

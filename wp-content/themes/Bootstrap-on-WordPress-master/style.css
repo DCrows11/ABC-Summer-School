@@ -82,17 +82,6 @@ body.theme-Bootstrap-on-WordPress-master {
     justify-content: space-evenly; 
 
 }
-/* .register {
-    position: absolute;
-    width: 45%;
-    height: 40%;
-    top: 19%;
-    left: 5%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; 
-
-} */
 /* Removing some random border */
 .nav-tabs {
     border: none;
@@ -110,18 +99,19 @@ body.theme-Bootstrap-on-WordPress-master {
     font-size: 4vh;
     padding: 0px;
     min-width: 150px;
-    /* padding-top: 0vh;
-    padding-right: 0vh;
-    padding-bottom: 1vh;
-    padding-left: 0vh; */
     box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+    transition: all 350ms ease;
 }
-/* TO BE ADDED
-    button animations
-*/
-/* #register-form-submit-button:hover {
-    
-} */
+#register-form-submit-button:hover {
+    background-color: rgb(255, 215, 95);
+    box-shadow: 8px 8px 3px 0px rgba(125, 125, 124, 0.4);
+}
+#register-form-submit-button:active {
+    background-color: rgb(243, 183, 1);
+    box-shadow: none;
+    transition: all 200ms ease;
+
+}
 /* User type select tabs */
 #customer-tab {
     position: absolute;
@@ -136,6 +126,7 @@ body.theme-Bootstrap-on-WordPress-master {
     font-family: sans-serif;
     color: rgb(255, 255, 255);
     text-align: center;
+    transition: all 200ms ease;
 }
 #employee-tab {
     position: absolute;
@@ -150,6 +141,7 @@ body.theme-Bootstrap-on-WordPress-master {
     font-family: sans-serif;
     color: rgb(255, 255, 255);
     text-align: center;
+    transition: all 200ms ease;
 }
 #company-tab {
     position: absolute;
@@ -164,6 +156,38 @@ body.theme-Bootstrap-on-WordPress-master {
     font-family: sans-serif;
     color: rgb(255, 255, 255);
     text-align: center;
+    transition: all 200ms ease;
+}
+/* Style for active tabs */
+#customer-tab:focus {
+    top: -2%;
+    height: 8%;
+    padding-bottom: 2%;
+    background-color: rgb(35, 54, 73);
+}
+#employee-tab:focus {
+    top: -2%;
+    height: 8%;
+    padding-bottom: 2%;
+    background-color: rgb(35, 54, 73);
+}
+#company-tab:focus {
+    top: -2%;
+    height: 8%;
+    padding-bottom: 2%;
+    background-color: rgb(35, 54, 73);
+}
+/* Register form logo */
+#register-form-logo {
+    position: absolute;
+    top: -20%;
+    left: 5%;
+    width: 50%;
+    height: 50%;
+    background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/favicon.svg");
+    background-repeat: no-repeat;
+    filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
+    z-index: 3;
 }
 /* Black rectangle next to register form, for design purposes */
 #black-rectangle-register-form {
@@ -179,7 +203,7 @@ body.theme-Bootstrap-on-WordPress-master {
     height: 94%;
     z-index: 2;
 }
-
+/* Added by Vlad, this probably does nothing */
 .Logo {
 	position: absolute;
 	left: 770px;
