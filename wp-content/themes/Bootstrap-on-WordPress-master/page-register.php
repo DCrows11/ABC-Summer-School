@@ -33,6 +33,9 @@
 <div id="register-form-rectangle">
   <div id="register-form-logo"></div>
   <div id="black-rectangle-register-form"></div>
+  <div id="registration-form-tos-consent">
+    <p>By submitting this form you agree to our <a href="http://localhost/privacy-policy/">Privacy Policy</a> and our <a href="http://localhost/terms-of-service/">Terms of Service</a></p>
+  </div>
   <ul class="nav nav-tabs" id="register-tab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="customer-tab" data-bs-toggle="tab" data-bs-target="#customer" type="button" role="tab" aria-controls="customer" aria-selected="true">Customer</button>

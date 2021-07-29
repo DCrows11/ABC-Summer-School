@@ -239,6 +239,21 @@ body.theme-Bootstrap-on-WordPress-master {
     z-index: 2;
 }
 
+/* ToS and Privacy Policy message in register form */
+
+#registration-form-tos-consent {
+    position: absolute;
+    bottom: 2%;
+    left: 14%;
+    z-index: 5;
+    color: white;
+}
+#registration-form-tos-consent a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
 @media (max-width: 16cm) {
     #customer-tab {
         position: absolute;
@@ -408,3 +423,4 @@ body.theme-Bootstrap-on-WordPress-master {
     background-repeat: no-repeat;
     filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
     z-index: 3;
+}
