@@ -35,6 +35,8 @@
 	 <div id="login-black-rectangle"> </div>
 	 <div id="login-logo"> </div>
  </div>
+ <div id="login-user-icon"></div>
+ <div id="login-password-icon"></div>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/footer',
 	'parts/shared/html-footer' 

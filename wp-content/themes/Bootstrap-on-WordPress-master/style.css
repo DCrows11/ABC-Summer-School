@@ -253,7 +253,7 @@ body.theme-Bootstrap-on-WordPress-master {
     color: white;
     text-decoration: none;
 }
-
+/* Format pentru non-pc la reister page (telefoane, etc.) */
 @media (max-width: 16cm) {
     #customer-tab {
         position: absolute;
@@ -376,6 +376,9 @@ body.theme-Bootstrap-on-WordPress-master {
         font-size: 2.5vh;
     }
 }
+/* De aici incepe codul pentru Login-page */
+
+/* Valori bloc galben + bloc negru + user registration form */
 #ur-frontend-form {
     border: none;
 }
@@ -422,5 +425,60 @@ body.theme-Bootstrap-on-WordPress-master {
     background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/favicon.svg");
     background-repeat: no-repeat;
     filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
+    z-index: 3;
+}
+/* Username + parola (stilzari) */
+#username {
+    border-radius: 1vh;
+    border-color: black;
+    margin-bottom: 15%;
+    height: 6vh;
+    top: 15vh;
+}
+#username::placeholder{
+    color: rgb(255, 229, 153)
+}
+#password {
+    border-radius: 1vh;
+    border-color: black;
+    margin-bottom: 12%;
+    height: 6vh;
+    top: 15vh;
+}
+#password::placeholder{
+    color: rgb(255, 229, 153)
+}
+/* Butonul de login */
+.user-registration-Button {
+    position: absolute;
+    right: 10%;
+    bottom: 24%;
+    font-weight: bold;
+    width: 10%;
+    height: 14%;
+    background-color: rgb(254, 193, 6);
+    border: 1.5px solid black;
+    font-size: 4vh;
+    padding: 0px;
+    min-width: 150px;
+    box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+    transition: all 350ms ease;
+}
+.user-registration-Button:hover  {
+    background-color: rgb(255, 215, 95);
+    box-shadow: 8px 8px 3px 0px rgba(125, 125, 124, 0.4);
+}
+
+.user-registration-Button:active {
+    background-color: rgb(243, 183, 1);
+    box-shadow: none;
+    transition: all 200ms ease;
+}
+/* Iconite user si parola fields */
+#login-user-icon {
+    width: 100px;
+    height: 200px;
+    background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/userlogin.svg");
+    background-repeat: no-repeat;
     z-index: 3;
 }
