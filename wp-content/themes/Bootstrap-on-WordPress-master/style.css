@@ -39,7 +39,7 @@ body.theme-Bootstrap-on-WordPress-master {
 /* Form fields */
 .ur-frontend-field {
     border: 2px solid black;
-    background-color: rgb(254, 193, 6);
+    background-color: rgb(255, 255, 225);
 }
 .ur-frontend-field::placeholder {
     opacity: 1;
@@ -73,7 +73,7 @@ body.theme-Bootstrap-on-WordPress-master {
 /* Register form field spacing */
 #register-form-custom-rows-design {
     position: absolute;
-    width: 45%;
+    width: 75%;
     height: 40%;
     top: 19%;
     left: 5%;
