@@ -9,11 +9,14 @@ Tags: 			babobski, bootstrap, basic theme
 */
 
 /* Site background */
+
 body.theme-Bootstrap-on-WordPress-master {
     background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/LNLBACKGROUND.svg");
     background-size: cover;
 }
+
 /* The rectangle containing the form, the user type options, and the design elements */
+
 #register-form-rectangle {
     position: relative;
     width: 48vw;
@@ -22,7 +25,9 @@ body.theme-Bootstrap-on-WordPress-master {
     top: 10vh;
     border: none;
 }
+
 /* Registration form */
+
 .formular-custom {
     position: absolute;
     background-color: rgb(254, 193, 6);
@@ -36,41 +41,54 @@ body.theme-Bootstrap-on-WordPress-master {
     margin-bottom: 0px;
     z-index: 1;
 }
+
 /* Form fields */
+
 .ur-frontend-field {
     border: 2px solid black;
     background-color: rgb(255, 255, 225);
 }
+
 .ur-frontend-field::placeholder {
     opacity: 1;
     font-weight: bold;
     font-size: 1em;
 }
+
 #user_email::placeholder {
     color: rgb(255, 229, 153)
 }
+
 #user_login::placeholder {
     color: rgb(255, 229, 153)
 }
+
 #user_pass::placeholder {
     color: rgb(255, 229, 153)
 }
+
 #user_confirm_password::placeholder {
     color: rgb(255, 229, 153)
 }
+
 #user_email {
-  border-radius: 1vh;
+    border-radius: 1vh;
 }
+
 #user_login {
-  border-radius: 1vh;
+    border-radius: 1vh;
 }
+
 #user_pass {
-  border-radius: 1vh;
+    border-radius: 1vh;
 }
+
 #user_confirm_password {
-  border-radius: 1vh;
+    border-radius: 1vh;
 }
+
 /* Register form field spacing */
+
 #register-form-custom-rows-design {
     position: absolute;
     width: 75%;
@@ -79,14 +97,17 @@ body.theme-Bootstrap-on-WordPress-master {
     left: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; 
-
+    justify-content: space-evenly;
 }
+
 /* Removing some random border */
+
 .nav-tabs {
     border: none;
 }
+
 /* Submit button */
+
 #register-form-submit-button {
     position: absolute;
     right: 10%;
@@ -102,17 +123,20 @@ body.theme-Bootstrap-on-WordPress-master {
     box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
     transition: all 350ms ease;
 }
+
 #register-form-submit-button:hover {
     background-color: rgb(255, 215, 95);
     box-shadow: 8px 8px 3px 0px rgba(125, 125, 124, 0.4);
 }
+
 #register-form-submit-button:active {
     background-color: rgb(243, 183, 1);
     box-shadow: none;
     transition: all 200ms ease;
-
 }
+
 /* User type select tabs */
+
 #customer-tab {
     position: absolute;
     background-color: rgb(12, 20, 28);
@@ -128,6 +152,7 @@ body.theme-Bootstrap-on-WordPress-master {
     text-align: center;
     transition: all 200ms ease;
 }
+
 #employee-tab {
     position: absolute;
     background-color: rgb(12, 20, 28);
@@ -143,6 +168,7 @@ body.theme-Bootstrap-on-WordPress-master {
     text-align: center;
     transition: all 200ms ease;
 }
+
 #company-tab {
     position: absolute;
     background-color: rgb(12, 20, 28);
@@ -158,26 +184,32 @@ body.theme-Bootstrap-on-WordPress-master {
     text-align: center;
     transition: all 200ms ease;
 }
+
 /* Style for active tabs */
+
 #customer-tab:focus {
     top: -2%;
     height: 8%;
     padding-bottom: 2%;
     background-color: rgb(35, 54, 73);
 }
+
 #employee-tab:focus {
     top: -2%;
     height: 8%;
     padding-bottom: 2%;
     background-color: rgb(35, 54, 73);
 }
+
 #company-tab:focus {
     top: -2%;
     height: 8%;
     padding-bottom: 2%;
     background-color: rgb(35, 54, 73);
 }
+
 /* Register form logo */
+
 #register-form-logo {
     position: absolute;
     pointer-events: none;
@@ -190,7 +222,9 @@ body.theme-Bootstrap-on-WordPress-master {
     filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
     z-index: 3;
 }
+
 /* Black rectangle next to register form, for design purposes */
+
 #black-rectangle-register-form {
     border-width: 1px;
     border-color: rgb(0, 0, 0);
@@ -204,15 +238,18 @@ body.theme-Bootstrap-on-WordPress-master {
     height: 94%;
     z-index: 2;
 }
+
 /* Added by Vlad, this probably does nothing */
+
 .Logo {
-	position: absolute;
-	left: 770px;
-	top: 169px;
-	width: 337px;
-	height: 246px;
-	z-index: 12;
+    position: absolute;
+    left: 770px;
+    top: 169px;
+    width: 337px;
+    height: 246px;
+    z-index: 12;
 }
+
 @media (max-width: 16cm) {
     #customer-tab {
         position: absolute;
@@ -267,7 +304,6 @@ body.theme-Bootstrap-on-WordPress-master {
         top: 20vh;
         border: none;
     }
-    
     #register-form-logo {
         position: absolute;
         pointer-events: none;
@@ -289,7 +325,7 @@ body.theme-Bootstrap-on-WordPress-master {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        align-content: space-between; 
+        align-content: space-between;
     }
     #register-form-submit-button {
         position: absolute;
@@ -335,6 +371,4 @@ body.theme-Bootstrap-on-WordPress-master {
         font-weight: bold;
         font-size: 2.5vh;
     }
-
-    
 }
