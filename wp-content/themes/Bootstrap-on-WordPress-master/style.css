@@ -75,7 +75,7 @@ body.theme-Bootstrap-on-WordPress-master {
     position: absolute;
     width: 75%;
     height: 40%;
-    top: 19%;
+    top: 24%;
     left: 5%;
     display: flex;
     flex-direction: column;
@@ -213,7 +213,7 @@ body.theme-Bootstrap-on-WordPress-master {
 	height: 246px;
 	z-index: 12;
 }
-@media (max-width: 1300px) {
+@media (max-width: 16cm) {
     #customer-tab {
         position: absolute;
         background-color: rgb(12, 20, 28);
@@ -290,8 +290,6 @@ body.theme-Bootstrap-on-WordPress-master {
         flex-wrap: wrap;
         flex-direction: column;
         align-content: space-between; 
-
-    
     }
     #register-form-submit-button {
         position: absolute;
