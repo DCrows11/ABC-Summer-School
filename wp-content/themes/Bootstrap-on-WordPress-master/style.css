@@ -262,16 +262,16 @@ body.theme-Bootstrap-on-WordPress-master {
     #register-form-rectangle {
         position: relative;
         width: 90vw;
-        height: 60vh;
+        height: 70vh;
         left: 5vw;
-        top: 15vh;
+        top: 20vh;
         border: none;
     }
     
     #register-form-logo {
         position: absolute;
         pointer-events: none;
-        top: -32%;
+        top: -19vh;
         left: 25%;
         width: 50%;
         height: 50%;
@@ -282,10 +282,10 @@ body.theme-Bootstrap-on-WordPress-master {
     }
     #register-form-custom-rows-design {
         position: absolute;
-        width: 75%;
-        height: 70%;
+        width: 85%;
+        height: 45%;
         top: 19%;
-        left: 12.5%;
+        left: 7.5%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -311,7 +311,31 @@ body.theme-Bootstrap-on-WordPress-master {
     .ur-frontend-field {
         border: 2px solid black;
         background-color: rgb(255, 255, 225);
-        margin-bottom: 50px;
+    }
+    #user_email {
+        border-radius: 1vh;
+        margin-bottom: 12%;
+        height: 6vh;
+    }
+    #user_login {
+        border-radius: 1vh;
+        margin-bottom: 12%;
+        height: 6vh;
+    }
+    #user_pass {
+        border-radius: 1vh;
+        margin-bottom: 12%;
+        height: 6vh;
+    }
+    #user_confirm_password {
+        border-radius: 1vh;
+        margin-bottom: 12%;
+        height: 6vh;
+    }
+    .ur-frontend-field::placeholder {
+        opacity: 1;
+        font-weight: bold;
+        font-size: 2.5vh;
     }
 
     
