@@ -180,6 +180,7 @@ body.theme-Bootstrap-on-WordPress-master {
 /* Register form logo */
 #register-form-logo {
     position: absolute;
+    pointer-events: none;
     top: -20%;
     left: 5%;
     width: 50%;
