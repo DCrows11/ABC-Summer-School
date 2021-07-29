@@ -17,8 +17,7 @@
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
 ) ); ?>
-
-<div class="content">
+<!-- <div class="content">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 		<h2>
@@ -28,11 +27,16 @@
 		<?php comments_template( '', true ); ?>
 
 	<?php endwhile; ?>
-</div>
-
+</div> -->
+<div id="login-yellow-rectangle"> 
+	 <?php
+	 echo do_shortcode ('[user_registration_my_account redirect_url=http://localhost/index.php]');
+	 ?>
+	 <div id="login-black-rectangle"> </div>
+	 <div id="login-logo"> </div>
+ </div>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/footer',
 	'parts/shared/html-footer' 
 ) ); ?>
-  <div class="Logo"></div> 
-  <img src="lockednloaded.svg" class="Logo">
+ 
