@@ -474,11 +474,21 @@ body.theme-Bootstrap-on-WordPress-master {
     box-shadow: none;
     transition: all 200ms ease;
 }
-/* Iconite user si parola fields */
-#login-user-icon {
-    width: 100px;
-    height: 200px;
-    background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/userlogin.svg");
+input#username::placeholder{
+    color: black;
+}
+input#username {
+    content:' ';
+    background: url("/wp-content/themes/Bootstrap-on-WordPress-master/images/userlogin.svg") center right;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+input#password::placeholder{
+    color: black;
+}
+input#password {
+    content:' ';
+    background: url("/wp-content/themes/Bootstrap-on-WordPress-master/images/userpassword.svg") center right;
     background-repeat: no-repeat;
     z-index: 3;
 }
