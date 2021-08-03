@@ -117,7 +117,7 @@ input#password {
 .ur-form-grid {
     position: absolute;
     top: 25%;
-    height: 50vh;
+    height: 80%;
     width: 90%;
 }
 /* Design Login ecrane mici*/
@@ -147,7 +147,7 @@ input#password {
     .ur-form-grid {
         position: absolute;
         top: 25%;
-        height: 50vh;
+        height: 80%;
         width: 90%;
     }
     #login-logo {
@@ -203,7 +203,7 @@ input#password {
     .ur-form-grid {
         position: absolute;
         top: 25%;
-        height: 50vh;
+        height: 80%;
         width: 90%;
     }
     #login-logo {
@@ -259,7 +259,7 @@ input#password {
         .ur-form-grid {
             position: absolute;
             top: 25%;
-            height: 50vh;
+            height: 80%;
             width: 90%;
         }
         #login-logo {
@@ -315,7 +315,7 @@ input#password {
     .ur-form-grid {
         position: absolute;
         top: 25%;
-        height: 50vh;
+        height: 80%;
         width: 90%;
     }
     #login-logo {
