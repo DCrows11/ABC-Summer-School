@@ -1,0 +1,9 @@
+2021-08-03T12:00:47+00:00 CRITICAL Uncaught Error: Call to undefined function theme_url() in C:\Users\popai\Desktop\CDH ABC\Git\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\parts\shared\html-header.php:15
+Stack trace:
+#0 C:\Users\popai\Desktop\CDH ABC\Git\ABC-Summer-School\wp-includes\template.php(732): require()
+#1 C:\Users\popai\Desktop\CDH ABC\Git\ABC-Summer-School\wp-includes\template.php(676): load_template('C:\\Users\\popai\\...', false, Array)
+#2 C:\Users\popai\Desktop\CDH ABC\Git\ABC-Summer-School\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\Users\popai\Desktop\CDH ABC\Git\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\external\bootstrap-utilities.php(43): get_template_part('parts/shared/ht...')
+#4 C:\Users\popai\Desktop\CDH ABC\Git\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-login.php(25): BsWp::get_template_parts(Array)
+#5 C:\Users\popai\Desktop\CDH ABC\Git\ABC-Summer-School\wp-includes\template-loader.php(106): include('C:\\ in C:\Users\popai\Desktop\CDH ABC\Git\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\parts\shared\html-header.php on line 15
+

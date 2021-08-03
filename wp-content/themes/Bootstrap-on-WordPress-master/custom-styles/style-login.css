@@ -1,0 +1,347 @@
+/* Valori bloc galben + bloc negru + user registration form */
+#ur-frontend-form {
+    border: none;
+}
+#user-registration{
+    position: absolute;
+    right: 0%;
+    width: 87%;
+    top: 0%;
+    margin: 0%;
+    height: 100%;
+    background-color: rgb(254, 193, 6);
+    
+}
+#login-yellow-rectangle {
+    position: relative;
+    background-color: rgb(254, 193, 6);
+    width: 460px;
+    height: 400px;
+    left: 35vw;
+    top: 20vh;
+    border: none;
+    
+}
+#login-black-rectangle {
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color: rgb(12, 20, 28);
+    box-shadow: 0px 9px 27px 0px rgba(12, 20, 28, 0.26);
+    position: absolute;
+    left: 0vw;
+    bottom: 0vh;
+    width: 4vw;
+    height: 100%;
+    z-index: 2;
+}
+#login-logo {
+    position: absolute;
+    pointer-events: none;
+    top: -20vh;
+    left: 20%;
+    width: 70%;
+    height: 70%;
+    background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/favicon.svg");
+    background-repeat: no-repeat;
+    filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
+    z-index: 3;
+}
+/* Username + parola (stilzari) */
+#username {
+    border-radius: 1vh;
+    border-color: black;
+    margin-bottom: 15%;
+    height: 6vh;
+    top: 15vh;
+}
+#username::placeholder{
+    color: rgb(255, 229, 153)
+}
+#password {
+    border-radius: 1vh;
+    border-color: black;
+    margin-bottom: 12%;
+    height: 6vh;
+    top: 15vh;
+}
+#password::placeholder{
+    color: rgb(255, 229, 153)
+}
+/* Butonul de login */
+.user-registration-Button {
+    position: absolute;
+    right: 10%;
+    bottom: 40%;
+    font-weight: bold;
+    width: 30%;
+    height: 14%;
+    background-color: rgb(254, 193, 6);
+    border: 1.5px solid black;
+    font-size: 3vh;
+    padding: 0px;
+    box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+    transition: all 350ms ease;
+}
+.user-registration-Button:hover  {
+    background-color: rgb(255, 215, 95);
+    box-shadow: 8px 8px 3px 0px rgba(125, 125, 124, 0.4);
+}
+
+.user-registration-Button:active {
+    background-color: rgb(243, 183, 1);
+    box-shadow: none;
+    transition: all 200ms ease;
+}
+
+/* Field-uri pozitie si design */
+
+input#username::placeholder{
+    color: black;
+}
+input#username {
+    content:' ';
+    background: url("/wp-content/themes/Bootstrap-on-WordPress-master/images/userlogin.svg") center right;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+input#password::placeholder{
+    color: black;
+}
+input#password {
+    content:' ';
+    background: url("/wp-content/themes/Bootstrap-on-WordPress-master/images/userpassword.svg") center right;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+.ur-form-grid {
+    position: absolute;
+    top: 25%;
+    height: 50vh;
+    width: 25vw;
+}
+/* Design Login ecrane mici*/
+@media (max-width: 1500px){
+    #login-yellow-rectangle {
+        position: relative;
+        background-color: rgb(254, 193, 6);
+        width: 480px;
+        height: 480px;
+        left: 30%;
+        top: 20vh;
+        border: none;
+    }
+    #login-black-rectangle {
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+        background-color: rgb(12, 20, 28);
+        box-shadow: 0px 9px 27px 0px rgba(12, 20, 28, 0.26);
+        position: absolute;
+        left: 0vw;
+        bottom: 0vh;
+        width: 15%;
+        height: 100%;
+        z-index: 2;
+    }
+    .ur-form-grid {
+        position: absolute;
+        top: 25%;
+        height: 50vh;
+        width: 90%;
+    }
+    #login-logo {
+        position: absolute;
+        pointer-events: none;
+        top: -20vh;
+        left: 20%;
+        width: 70%;
+        height: 70%;
+        background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/favicon.svg");
+        background-repeat: no-repeat;
+        filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
+        z-index: 3;
+    }
+    .user-registration-Button {
+        position: absolute;
+        right: 5%;
+        bottom: 42.5%;
+        font-weight: bold;
+        width: 40%;
+        height: 14%;
+        background-color: rgb(254, 193, 6);
+        border: 1.5px solid black;
+        font-size: 3vh;
+        padding: 0px;
+        box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+        transition: all 350ms ease;
+    }
+}
+@media (max-width: 1380px){  
+    #login-yellow-rectangle {
+        position: relative;
+        background-color: rgb(254, 193, 6);
+        width: 690px;
+        height: 550px;
+        left: 22.5%;
+        top: 20vh;
+        border: none;
+    }
+    #login-black-rectangle {
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+        background-color: rgb(12, 20, 28);
+        box-shadow: 0px 9px 27px 0px rgba(12, 20, 28, 0.26);
+        position: absolute;
+        left: 0vw;
+        bottom: 0vh;
+        width: 15%;
+        height: 100%;
+        z-index: 2;
+    }
+    .ur-form-grid {
+        position: absolute;
+        top: 25%;
+        height: 50vh;
+        width: 90%;
+    }
+    #login-logo {
+        position: absolute;
+        pointer-events: none;
+        top: -22.5vh;
+        left: 20%;
+        width: 70%;
+        height: 70%;
+        background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/favicon.svg");
+        background-repeat: no-repeat;
+        filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
+        z-index: 3;
+    }
+    .user-registration-Button {
+        position: absolute;
+        right: 5%;
+        bottom: 40%;
+        font-weight: bold;
+        width: 40%;
+        height: 14%;
+        background-color: rgb(254, 193, 6);
+        border: 1.5px solid black;
+        font-size: 3vh;
+        padding: 0px;
+        box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+        transition: all 350ms ease;
+    }
+}    
+    @media (max-width: 900px){
+        #login-yellow-rectangle {
+            position: relative;
+            background-color: rgb(254, 193, 6);
+            width: 675px;
+            height: 550px;
+            left: 12.5%;
+            top: 20vh;
+            border: none;
+        }
+        #login-black-rectangle {
+            border-width: 1px;
+            border-color: rgb(0, 0, 0);
+            border-style: solid;
+            background-color: rgb(12, 20, 28);
+            box-shadow: 0px 9px 27px 0px rgba(12, 20, 28, 0.26);
+            position: absolute;
+            left: 0vw;
+            bottom: 0vh;
+            width: 15%;
+            height: 100%;
+            z-index: 2;
+        }
+        .ur-form-grid {
+            position: absolute;
+            top: 25%;
+            height: 50vh;
+            width: 90%;
+        }
+        #login-logo {
+            position: absolute;
+            pointer-events: none;
+            top: -22vh;
+            left: 20%;
+            width: 70%;
+            height: 70%;
+            background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/favicon.svg");
+            background-repeat: no-repeat;
+            filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
+            z-index: 3;
+        }
+        .user-registration-Button {
+            position: absolute;
+            right: 5%;
+            bottom: 30%;
+            font-weight: bold;
+            width: 40%;
+            height: 14%;
+            background-color: rgb(254, 193, 6);
+            border: 1.5px solid black;
+            font-size: 3vh;
+            padding: 0px;
+            box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+            transition: all 350ms ease;
+        }
+}    
+@media (max-width: 500px){
+    #login-yellow-rectangle {
+        position: relative;
+        background-color: rgb(254, 193, 6);
+        width: 450px;
+        height: 550px;
+        left: 5%;
+        top: 20vh;
+        border: none;
+    }
+    #login-black-rectangle {
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+        background-color: rgb(12, 20, 28);
+        box-shadow: 0px 9px 27px 0px rgba(12, 20, 28, 0.26);
+        position: absolute;
+        left: 0vw;
+        bottom: 0vh;
+        width: 15%;
+        height: 100%;
+        z-index: 2;
+    }
+    .ur-form-grid {
+        position: absolute;
+        top: 25%;
+        height: 50vh;
+        width: 90%;
+    }
+    #login-logo {
+        position: absolute;
+        pointer-events: none;
+        top: -20vh;
+        left: 20%;
+        width: 70%;
+        height: 70%;
+        background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/favicon.svg");
+        background-repeat: no-repeat;
+        filter: drop-shadow(4px 6px 8px rgba(125, 125, 124, 0.6));
+        z-index: 3;
+    }
+    .user-registration-Button {
+        position: absolute;
+        right: 5%;
+        bottom: 40%;
+        font-weight: bold;
+        width: 40%;
+        height: 14%;
+        background-color: rgb(254, 193, 6);
+        border: 1.5px solid black;
+        font-size: 3vh;
+        padding: 0px;
+        box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+        transition: all 350ms ease;
+    }
+}    

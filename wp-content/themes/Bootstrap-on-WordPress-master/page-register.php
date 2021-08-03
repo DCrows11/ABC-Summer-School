@@ -10,10 +10,17 @@
  * Please see /external/bootsrap-utilities.php for info on BsWp::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Bootstrap 5.0.1
+ * @subpackage 	Bootstrap 5.0.1S
  * @autor 		Babobski
  */
 ?>
+
+<?php
+function style_define() {
+  return 'style-register';
+}
+?>
+
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
 ) ); ?>

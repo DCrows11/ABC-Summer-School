@@ -14,6 +14,13 @@
  * @autor 		Babobski
  */
 ?>
+
+<?php
+function style_define() {
+  return 'style-login';
+}
+?>
+
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
 ) ); ?>
