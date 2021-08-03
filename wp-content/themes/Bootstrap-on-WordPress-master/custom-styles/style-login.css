@@ -118,7 +118,7 @@ input#password {
     position: absolute;
     top: 25%;
     height: 50vh;
-    width: 25vw;
+    width: 90%;
 }
 /* Design Login ecrane mici*/
 @media (max-width: 1500px){
