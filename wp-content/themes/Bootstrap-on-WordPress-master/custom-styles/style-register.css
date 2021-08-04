@@ -7,7 +7,7 @@
     border: none;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 /* Registration form */
@@ -71,7 +71,7 @@
     border-radius: 8px;
 }
 
-/* Register form field spacing */
+/* Register form fields position */
 
 #register-form-custom-rows-design {
     position: absolute;
@@ -92,7 +92,7 @@
 #register-form-submit-button {
     position: absolute;
     right: 10%;
-    bottom: 15%;
+    bottom: 20%;
     font-weight: bold;
     width: 27%;
     height: 10%;
@@ -238,6 +238,96 @@
 
 /* Format pentru non-pc la register page (telefoane, etc.) */
 
+
+@media (max-width: 1300px) {
+    #register-form-rectangle {
+        width: 520px;
+        height: 440px;
+        margin-top: 48px;
+    }
+    #register-form-submit-button {
+        width: 27%;
+        height: 10%;
+        background-color: rgb(254, 193, 6);
+        border: 1.5px solid black;
+        font-size: 30px;
+        padding: 0px;
+        min-width: 150px;
+        box-shadow: 4px 4px 3px 0px rgba(125, 125, 124, 0.4);
+        transition: all 350ms ease;
+    }
+    .ur-frontend-form .ur-form-row .ur-form-grid .ur-field-item {
+        margin-bottom: 0px;
+    }
+    #user_email {
+        min-height: 0px;
+        height: 29px;
+    }
+    
+    #user_login {
+        min-height: 0px;
+        height: 29px;
+    }
+    
+    #user_pass {
+        min-height: 0px;
+        height: 29px;
+    }
+    
+    #user_confirm_password {
+        min-height: 0px;
+        height: 29px;
+    }
+    #register-form-submit-button {
+        font-size: 24px;
+    }
+    #customer-tab {
+        font-size: 16px;
+    }
+    #employee-tab {
+        font-size: 16px;
+    }
+    #company-tab {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1000px) {
+    #register-form-rectangle {
+        width: 390px;
+        height: 330px;
+        margin-top: 36px;
+    }
+    #user_email {
+        min-height: 0px;
+        height: 22px;
+    }
+    
+    #user_login {
+        min-height: 0px;
+        height: 22px;
+    }
+    
+    #user_pass {
+        min-height: 0px;
+        height: 22px;
+    }
+    #user_confirm_password {
+        min-height: 0px;
+        height: 22px;
+    }
+    #register-form-submit-button {
+        font-size: 18px;
+    }
+    #customer-tab {
+        font-size: 12px;
+    }
+    #employee-tab {
+        font-size: 12px;
+    }
+    #company-tab {
+        font-size: 12px;
+    }
+}
 @media (max-width: 768px) {
     #register-form-rectangle {
         width: 100%;
@@ -282,5 +372,27 @@
         top: 5%;
         left: 20%;
         max-height: 280px;
+    }
+    #user_email {
+        min-height: 0px;
+        height: 50px;
+    }
+    
+    #user_login {
+        min-height: 0px;
+        height: 50px;
+    }
+    
+    #user_pass {
+        min-height: 0px;
+        height: 50px;
+    }
+    #user_confirm_password {
+        min-height: 0px;
+        height: 50px;
+    }
+    #register-form-submit-button {
+        font-size: 36px;
+        bottom: 15%;
     }
 }
