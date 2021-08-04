@@ -1,0 +1,15 @@
+2021-08-04T10:30:00+00:00 CRITICAL syntax error, unexpected ')' in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-my-employees.php on line 28
+
+2021-08-04T11:59:38+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting :: (T_PAAMAYIM_NEKUDOTAYIM) in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-my-employees.php on line 71
+
+2021-08-04T13:36:59+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-my-employees.php on line 102
+
+2021-08-04T19:13:05+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-my-companies.php:146
+Stack trace:
+#0 C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-my-companies.php(128): firstTab()
+#1 C:\Andrei\Proiect CH\ABC-Summer-School\wp-includes\template-loader.php(106): include('C:\\Andrei\\Proie...')
+#2 C:\Andrei\Proiect CH\ABC-Summer-School\wp-blog-header.php(19): require_once('C:\\Andrei\\Proie...')
+#3 C:\Andrei\Proiect CH\ABC-Summer-School\index.php(17): require('C:\\Andrei\\Proie...')
+#4 {main}
+  thrown in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-my-companies.php on line 146
+
