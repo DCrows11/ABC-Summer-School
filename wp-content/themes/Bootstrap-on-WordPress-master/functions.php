@@ -263,6 +263,44 @@ add_role('company', 'Company', [
 add_role('employee', 'Employee', [
 	'manage_options' => false,
 ]);
+
+/**
+ * Add a value to an ACF field
+ * 
+ * @param string $fieldName the name of the field you want to add the value to
+ * @param string $fieldId the id of the field
+ * @param mixed $valueToBeAdded the value you want to add to the field
+ */
+function addToCustomField($fieldName, $fieldId, $valueToBeAdded) {
+	if (get_field($fieldName, $fieldId) !== null) {
+        if (!in_array($valueToBeAdded, get_field($fieldName, $fieldId))) {
+            $listOfInvitations = get_field($fieldName, $fieldId);
+            $listOfInvitations[] = $valueToBeAdded;
+            update_field($fieldName, $listOfInvitations, $fieldId);
+        }
+    } else {
+        $listOfInvitations = [$valueToBeAdded,];
+        update_field($fieldName, $listOfInvitations, $fieldId);
+    }
+}
+/**
+ * Remove a value from an ACF field
+ * 
+ * @param string $fieldName the name of the field you want to remove the value from
+ * @param string $fieldId the id of the field
+ * @param mixed $valueToBeRemoved the value you want to remove from the field
+ */
+function removeFromCustomField($fieldName, $fieldId, $valueToBeRemoved) {
+    if (count(get_field($fieldName, $fieldId)) > 1) {
+        $listOfInvitationsFromCompanies = get_field($fieldName, $fieldId);
+        $listOfInvitationsFromCompanies = \array_diff($listOfInvitationsFromCompanies, [$valueToBeRemoved]);
+        update_field($fieldName, $listOfInvitationsFromCompanies, $fieldId);
+    }
+    else {
+        update_field($fieldName, null, $fieldId);
+    }
+}
+
 add_action( 'wp_enqueue_scripts', 'load_custom_product_style' );
 function load_custom_product_style() {
 	wp_register_style( 'product_css', get_stylesheet_directory_uri() . '/custom-styles/style-product-template.css', false, '1.0.0', 'all' );
