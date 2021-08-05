@@ -55,7 +55,7 @@ if (isset($_POST['newEmployee'])) {
     if (get_field('invitations_to_employees', 'user_' . get_current_user_id()) !== null) {
         if (!in_array($newEmployeeId, get_field('invitations_to_employees', 'user_' . get_current_user_id()))) {
             $listOfInvitations = get_field('invitations_to_employees', 'user_' . get_current_user_id());
-            array_push($listOfInvitations, $newEmployeeId);
+            $listOfInvitations[] = $newEmployeeId;
             update_field('invitations_to_employees', $listOfInvitations, 'user_' . get_current_user_id());
         }
     } else {
@@ -69,7 +69,7 @@ if (isset($_POST['newEmployee'])) {
     if (get_field('invitations_from_companies', $employeeFieldId) !== null) {
         if (!in_array($companyId, get_field('invitations_from_companies', $employeeFieldId))) {
             $listOfInvitationsFromCompanies = get_field('invitations_from_companies', $employeeFieldId);
-            array_push($listOfInvitationsFromCompanies, $companyId);
+            $listOfInvitationsFromCompanies[] = $companyId;
             update_field('invitations_from_companies', $listOfInvitationsFromCompanies, $employeeFieldId);
         }
     } else {

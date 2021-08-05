@@ -32,7 +32,7 @@ $users = get_users( $args );
 
 echo '<ul>';
 foreach ( $users as $user ) {
-    echo '<li>' . esc_html( $user->display_name ) . '</li>';
+    echo "<li><a href=\"http://localhost/companies/?company=$user->id\">" . esc_html( $user->user_login ) . '</a></li>';
 }
 echo '</ul>';
 
