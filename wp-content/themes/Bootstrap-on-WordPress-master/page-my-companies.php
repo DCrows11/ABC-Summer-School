@@ -93,7 +93,7 @@ if (isset($_POST['companyJoined'])) {
     if (get_field('employed_to_companies_list', $employeeToBeChangedIdForm) !== null) {
         if (!in_array($companyToBeChangedId, get_field('employed_to_companies_list', $employeeToBeChangedIdForm))) {
             $listOfCompanies = get_field('employed_to_companies_list', $employeeToBeChangedIdForm);
-            $listOfCompanies = $companyToBeChangedId;
+            $listOfCompanies[] = $companyToBeChangedId;
             update_field('employed_to_companies_list', $listOfCompanies, $employeeToBeChangedIdForm);
         }
     } else {

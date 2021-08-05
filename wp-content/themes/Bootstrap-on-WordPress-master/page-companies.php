@@ -44,7 +44,7 @@ function displayProducts($products) {
             foreach ($products as $product) {
                 $product = get_post($product);
                 echo "<div class=\"company-products-list-box\">";
-                echo "<p>$product->post_title</p>";
+                echo "<p><a href=\"http://localhost/product/$product->post_name\">$product->post_title</a></p>";
                 echo "</div>";
             }
         echo "</div>";
