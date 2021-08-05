@@ -256,10 +256,15 @@
 		}
 	}
 
-	add_role('company', 'Company', [
-		'manage_options' => false,
-	]);
+add_role('company', 'Company', [
+	'manage_options' => false,
+]);
 
-	add_role('employee', 'Employee', [
-		'manage_options' => false,
-	]);
+add_role('employee', 'Employee', [
+	'manage_options' => false,
+]);
+add_action( 'wp_enqueue_scripts', 'load_custom_product_style' );
+function load_custom_product_style() {
+	wp_register_style( 'product_css', get_stylesheet_directory_uri() . '/custom-styles/style-product-template.css', false, '1.0.0', 'all' );
+	wp_enqueue_style('product_css');
+}
