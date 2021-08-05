@@ -16,7 +16,7 @@ body.theme-Bootstrap-on-WordPress-master {
 }
 
 .custom-site-footer-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0%;
     height: 50px;
