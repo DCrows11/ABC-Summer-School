@@ -16,10 +16,8 @@ body.theme-Bootstrap-on-WordPress-master {
 }
 
 .custom-site-footer-container {
-    position: fixed;
     width: 100%;
-    bottom: 0%;
-    height: 50px;
+    height: auto;
 }
 
 .custom-site-footer {
@@ -34,6 +32,7 @@ body.theme-Bootstrap-on-WordPress-master {
     color: white;
     padding-top: 15px;
 }
+
 .custom-site-footer a {
     color: white;
     text-decoration: none;

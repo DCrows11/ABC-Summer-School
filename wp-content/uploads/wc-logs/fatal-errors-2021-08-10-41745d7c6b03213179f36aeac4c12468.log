@@ -1,0 +1,4 @@
+2021-08-10T13:26:06+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-add-product.php on line 15
+
+2021-08-10T13:27:49+00:00 CRITICAL syntax error, unexpected ')', expecting ']' in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-add-product.php on line 16
+
