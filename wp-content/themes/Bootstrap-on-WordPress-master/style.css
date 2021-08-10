@@ -12,7 +12,7 @@ Tags: 			babobski, bootstrap, basic theme
 
 body.theme-Bootstrap-on-WordPress-master {
     background-image: url("http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/LNLBACKGROUND.svg");
-    background-size: cover;
+    background-size: 1920px 1080px;
 }
 
 .custom-site-footer-container {
