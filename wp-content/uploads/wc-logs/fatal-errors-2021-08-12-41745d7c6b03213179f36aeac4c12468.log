@@ -14,3 +14,5 @@ Stack trace:
 #3 {main}
   thrown in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-add-product.php on line 111
 
+2021-08-12T22:47:55+00:00 CRITICAL syntax error, unexpected ';' in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-my-companies.php on line 163
+

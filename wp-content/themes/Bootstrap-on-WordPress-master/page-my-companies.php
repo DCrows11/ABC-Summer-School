@@ -157,20 +157,16 @@ function thirdTab()
 {
     global $applicationsSent;
     global $employeeFieldId;
+    global $companiesEmployed;
     echo "<form method=\"post\">";
-    if (get_field($applicationsSent, $employeeFieldId) !== null) {
-        $excludedCompanies = get_field($applicationsSent, $employeeFieldId);
-        wp_dropdown_users($args = [
-            'role' => 'company',
-            'name' => 'appliedToCompany',
-            'exclude' => $excludedCompanies,
-        ]);
-    } else {
-        wp_dropdown_users($args = [
-            'role' => 'company',
-            'name' => 'appliedToCompany',
-        ]);
-    }
+    $excludedCompanies1 = get_field($applicationsSent, $employeeFieldId);
+    $excludedCompanies2 = get_field($companiesEmployed, $employeeFieldId);
+    $excludedCompanies = array_merge((array)$excludedCompanies1, (array)$excludedCompanies2);
+    wp_dropdown_users($args = [
+        'role' => 'company',
+        'name' => 'appliedToCompany',
+        'exclude' => $excludedCompanies,
+    ]);
     echo "<input type=\"submit\" value=\"Send Application\">";
     echo "</form>";
 }
