@@ -1,6 +1,6 @@
 <?php
 
-//Redirect if user is not logged in or not a company/employee
+//Redirect if user is not logged in, not a company/employee, or if user doesn't belong to a company
 if (!is_user_logged_in()) {
     wp_redirect('http://localhost/login');
     exit;
@@ -9,6 +9,13 @@ if (!is_user_logged_in()) {
     if (!in_array('company', (array) $user->roles) && !in_array('employee', (array) $user->roles)) {
         wp_redirect('http://localhost/');
         exit;
+    } else {
+        if (in_array('employee', (array) $user->roles)) {
+            if (!get_field('employed_to_companies_list', 'user_' . get_current_user_id())) {
+                wp_redirect('http://localhost/');
+                exit;
+            }
+        }
     }
 }
 
@@ -20,6 +27,23 @@ if (!is_user_logged_in()) {
 )); ?>
 
 <form method="post" enctype="multipart/form-data">
+    <?php
+    //If user is an employee, display field for selecting the company to which he wants to add the product
+    if (in_array('employee', (array) $user->roles)) :
+    ?>
+        <div id="add-product-form-product-company">
+            <label for="product-company">Product Company</label><br>
+            <?php
+            $listOfJoinedCompanies = get_field('employed_to_companies_list', 'user_' . get_current_user_id());
+            wp_dropdown_users($args = [
+                'name' => 'product-company',
+                'include' => $listOfJoinedCompanies,
+            ]);
+            ?>
+            <br>
+        </div>
+        <br>
+    <?php endif; ?>
     <div id="add-product-form-product-name">
         <label for="product-name">Product Name</label><br>
         <input type="text" id="product-name" name="product-name" required><br>
@@ -35,14 +59,14 @@ if (!is_user_logged_in()) {
         <input type="text" id="product-long-description" name="product-long-description" required><br>
     </div>
     <br>
-    <div id="add-product-form-product-regular-price">
-        <label for="product-regular-price">Regular Price ($)</label><br>
-        <input type="number" step=0.01 id="product-regular-price" name="product-regular-price" required><br>
+    <div id="add-product-form-product-selling-price">
+        <label for="product-selling-price">Selling Price ($)</label><br>
+        <input type="number" step=0.01 id="product-selling-price" name="product-selling-price" required><br>
     </div>
     <br>
-    <div id="add-product-form-product-sale-price">
-        <label for="product-sale-price">Sale Price ($)</label><br>
-        <input type="number" step=0.01 id="product-sale-price" name="product-sale-price" required><br>
+    <div id="add-product-form-product-production-price">
+        <label for="product-production-price">Production Price ($)</label><br>
+        <input type="number" step=0.01 id="product-production-price" name="product-production-price" required><br>
     </div>
     <br>
     <div id="add-product-form-product-image">
@@ -68,15 +92,56 @@ if (!is_user_logged_in()) {
 <?php
 
 if (isset($_POST['product-name'])) {
-    $productName = $_GET['product-name'];
-    $productShortDescription = $_GET['product-short-description'];
-    $productLongDescription = $_GET['product-long-description'];
-    $productRegularPrice = $_GET['product-regular-price'];
-    $productSalePrice = $_GET['product-sale-price'];
-    $productCategory = $_GET['product-category'];
-    // echo "<pre>";
-    // var_dump($_FILES['product-image']);
-    // echo "</pre>";
+    $productName = $_POST['product-name'];
+    $productShortDescription = $_POST['product-short-description'];
+    $productLongDescription = $_POST['product-long-description'];
+    $productSellingPrice = $_POST['product-selling-price'];
+    $productProductionPrice = $_POST['product-production-price'];
+    $productCategory = $_POST['product-category'];
+    if ($productCategory == 'weapons') {
+        // $productCategoryId = 16;
+    } else if ($productCategory == 'ammo') {
+        // $productCategoryId = 17;
+    }
+    else if ($productCategory == 'accessories') {
+        // $productCategoryId = 18;
+    }
+    if (in_array('employee', (array) $user->roles)) {
+        $productCompany = $_POST['product-company'];
+    } else {
+        $productCompany = $user->id;
+    }
+    //Creating a product post
+    // $newProductData = [
+    //     'post_content' => $productLongDescription,
+    //     'post_title' => $productName,
+    //     'post_author' => $productCompany,
+    //     'post_status' => 'publish',
+    //     'post_type' => 'product',
+    // ];
+    // $postId = wp_insert_post($newProductData);
+    $product = new WC_Product_Simple();
+    //Setting the product title
+    $product->set_name($productName);
+    //Setting the selling price
+    $product->set_price($productSellingPrice);
+    $product->set_regular_price($productSellingPrice);
+    //Setting the product descriptions
+    $product->set_short_description($productShortDescription);
+    $product->set_description($productLongDescription);
+    //Setting the input price
+    update_field('product_production_price', $productProductionPrice, $product->id);
+    //Setting the categories
+    $product->set_category_ids($productCategoryId);
+    //Saving the product
+    $product->save();
+    /*
+     * TO DO
+     * 
+     * -set the product image
+     * 
+     * 
+     */
 }
 ?>
 

@@ -20,20 +20,17 @@ $args = [
     'numberposts' => -1,
     'post_type' => 'product',
     'post_status' => 'publish',
+    'author' => $companyId
 ];
-$listOfAllProducts = get_posts($args);
-$companyProductsId = filterProducts($listOfAllProducts, $companyId);
-displayProducts($companyProductsId);
-function filterProducts($unfilteredProducts, $companyId)
+$productsList = get_posts($args);
+$productsIdsList = filterProducts($productsList);
+displayProducts($productsIdsList);
+function filterProducts($unfilteredProducts)
 {
     $filteredProducts = [];
     for ($i = 0; $i < count($unfilteredProducts); $i++) {
         $currentProduct = $unfilteredProducts[$i];
-        $productId = $currentProduct->ID;
-        $currentSeller = get_field( 'seller', $productId );
-        if ($currentSeller == $companyId) {
-            $filteredProducts[] = $productId;
-        }
+        $filteredProducts[] = $currentProduct->ID;
     }
     return $filteredProducts;
 }
