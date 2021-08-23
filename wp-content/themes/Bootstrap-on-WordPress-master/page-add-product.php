@@ -140,6 +140,11 @@ if (isset($_POST['product-name'])) {
         $product->set_category_ids((array)$productCategoryId);
         //Saving the product
         $product->save();
+        //Setting product author
+        wp_update_post([
+            'id' => $product->get_id(),
+            'author' => $productCompany,
+        ]);
         //Setting the input price
         update_field('product_production_price', $productProductionPrice, $product->get_id());
         //Uploading the product image

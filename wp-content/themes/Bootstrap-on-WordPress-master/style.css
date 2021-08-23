@@ -21,7 +21,7 @@ body.theme-Bootstrap-on-WordPress-master {
 }
 
 .custom-site-footer {
-    display: grid block;
+    display: grid;
     justify-content: space-evenly;
     grid-template-columns: auto auto auto;
     position: absolute;

@@ -1,0 +1,8 @@
+2021-08-23T18:51:25+00:00 CRITICAL Uncaught Error: Call to a member function get_product() on null in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-remove-product.php:12
+Stack trace:
+#0 C:\Andrei\Proiect CH\ABC-Summer-School\wp-includes\template-loader.php(106): include()
+#1 C:\Andrei\Proiect CH\ABC-Summer-School\wp-blog-header.php(19): require_once('C:\\Andrei\\Proie...')
+#2 C:\Andrei\Proiect CH\ABC-Summer-School\index.php(17): require('C:\\Andrei\\Proie...')
+#3 {main}
+  thrown in C:\Andrei\Proiect CH\ABC-Summer-School\wp-content\themes\Bootstrap-on-WordPress-master\page-remove-product.php on line 12
+
