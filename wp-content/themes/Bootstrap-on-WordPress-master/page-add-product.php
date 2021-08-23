@@ -99,12 +99,12 @@ if (isset($_POST['product-name'])) {
     $productProductionPrice = $_POST['product-production-price'];
     $productCategory = $_POST['product-category'];
     if ($productCategory == 'weapons') {
-        // $productCategoryId = 16;
+        $productCategoryId = 16;
     } else if ($productCategory == 'ammo') {
-        // $productCategoryId = 17;
+        $productCategoryId = 17;
     }
     else if ($productCategory == 'accessories') {
-        // $productCategoryId = 18;
+        $productCategoryId = 18;
     }
     if (in_array('employee', (array) $user->roles)) {
         $productCompany = $_POST['product-company'];
@@ -129,17 +129,16 @@ if (isset($_POST['product-name'])) {
     //Setting the product descriptions
     $product->set_short_description($productShortDescription);
     $product->set_description($productLongDescription);
-    //Setting the input price
-    update_field('product_production_price', $productProductionPrice, $product->id);
     //Setting the categories
-    $product->set_category_ids($productCategoryId);
+    $product->set_category_ids((array)$productCategoryId);
     //Saving the product
     $product->save();
+    //Setting the input price
+    update_field('product_production_price', $productProductionPrice, $product->get_id());
     /*
      * TO DO
      * 
      * -set the product image
-     * 
      * 
      */
 }
