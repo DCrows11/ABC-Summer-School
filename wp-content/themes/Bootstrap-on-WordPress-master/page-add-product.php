@@ -70,7 +70,7 @@ if (!is_user_logged_in()) {
     </div>
     <br>
     <div id="add-product-form-product-image">
-        <label for="product-image">Product image</label><br>
+        <label for="product-image">Product image (only .png and .jpg allowed, under 2MB)</label><br>
         <input type="file" id="product-image" name="product-image"><br>
     </div>
     <br>
@@ -92,55 +92,76 @@ if (!is_user_logged_in()) {
 <?php
 
 if (isset($_POST['product-name'])) {
-    $productName = $_POST['product-name'];
-    $productShortDescription = $_POST['product-short-description'];
-    $productLongDescription = $_POST['product-long-description'];
-    $productSellingPrice = $_POST['product-selling-price'];
-    $productProductionPrice = $_POST['product-production-price'];
-    $productCategory = $_POST['product-category'];
-    if ($productCategory == 'weapons') {
-        $productCategoryId = 16;
-    } else if ($productCategory == 'ammo') {
-        $productCategoryId = 17;
+    $canAddProduct = true;
+    $productImage = $_FILES["product-image"];
+    $productImageName = $productImage["name"];
+    $productImageSize = $productImage["size"];
+    $imageFileType = strtolower(pathinfo($productImageName, PATHINFO_EXTENSION));
+    //Check if image is .jpg or .png
+    if ($imageFileType !== 'jpg' && $imageFileType !== 'png') {
+        echo "<p style=\"color:red\">Could not add product, image file type is not .png or .jpg</p>";
+        $canAddProduct = false;
     }
-    else if ($productCategory == 'accessories') {
-        $productCategoryId = 18;
+    //Check if image is under 2MB
+    if ($_FILES["product-image"]["size"] > 2097152) {
+        echo "<p style=\"color:red\">Could not add product, image size is too large</p>";
+        $canAddProduct = false;
     }
-    if (in_array('employee', (array) $user->roles)) {
-        $productCompany = $_POST['product-company'];
-    } else {
-        $productCompany = $user->id;
+    if ($canAddProduct) {
+        $productName = $_POST['product-name'];
+        $productShortDescription = $_POST['product-short-description'];
+        $productLongDescription = $_POST['product-long-description'];
+        $productSellingPrice = $_POST['product-selling-price'];
+        $productProductionPrice = $_POST['product-production-price'];
+        $productCategory = $_POST['product-category'];
+        if ($productCategory == 'weapons') {
+            $productCategoryId = 16;
+        } else if ($productCategory == 'ammo') {
+            $productCategoryId = 17;
+        } else if ($productCategory == 'accessories') {
+            $productCategoryId = 18;
+        }
+        if (in_array('employee', (array) $user->roles)) {
+            $productCompany = $_POST['product-company'];
+        } else {
+            $productCompany = $user->id;
+        }
+        //Create product object
+        $product = new WC_Product_Simple();
+        //Setting the product title
+        $product->set_name($productName);
+        //Setting the selling price
+        $product->set_price($productSellingPrice);
+        $product->set_regular_price($productSellingPrice);
+        //Setting the product descriptions
+        $product->set_short_description($productShortDescription);
+        $product->set_description($productLongDescription);
+        //Setting the categories
+        $product->set_category_ids((array)$productCategoryId);
+        //Saving the product
+        $product->save();
+        //Setting the input price
+        update_field('product_production_price', $productProductionPrice, $product->get_id());
+        //Uploading the product image
+        $uploads_dir = 'wp-content/uploads/custom-product-images';
+        $tmp_name = $productImage["tmp_name"];
+        $name = basename($productImageName);
+        $newImageName = "product-" . $product->get_id() . "-image.png";
+        move_uploaded_file($tmp_name, "$uploads_dir/$newImageName");
+        //Setting Attachment
+        $postMimeType = "image/" . $imageFileType;
+        $attachmentArgs = [
+            'post_mime_type' => $postMimeType,
+        ];
+        $attachmentId = wp_insert_attachment($attachmentArgs, $newImageName, $product->get_id());
+
+        require_once(ABSPATH . 'wp-admin/includes/image.php');
+        wp_update_attachment_metadata($attachmentId, wp_generate_attachment_metadata($attachmentId, "$uploads_dir/$newImageName"));
+
+
+        $product->set_image_id((int)$attachmentId);
+        $product->save();
     }
-    //Creating a product post
-    // $newProductData = [
-    //     'post_content' => $productLongDescription,
-    //     'post_title' => $productName,
-    //     'post_author' => $productCompany,
-    //     'post_status' => 'publish',
-    //     'post_type' => 'product',
-    // ];
-    // $postId = wp_insert_post($newProductData);
-    $product = new WC_Product_Simple();
-    //Setting the product title
-    $product->set_name($productName);
-    //Setting the selling price
-    $product->set_price($productSellingPrice);
-    $product->set_regular_price($productSellingPrice);
-    //Setting the product descriptions
-    $product->set_short_description($productShortDescription);
-    $product->set_description($productLongDescription);
-    //Setting the categories
-    $product->set_category_ids((array)$productCategoryId);
-    //Saving the product
-    $product->save();
-    //Setting the input price
-    update_field('product_production_price', $productProductionPrice, $product->get_id());
-    /*
-     * TO DO
-     * 
-     * -set the product image
-     * 
-     */
 }
 ?>
 

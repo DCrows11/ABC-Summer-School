@@ -306,3 +306,8 @@ function load_custom_product_style() {
 	wp_register_style( 'product_css', get_stylesheet_directory_uri() . '/custom-styles/style-product-template.css', false, '1.0.0', 'all' );
 	wp_enqueue_style('product_css');
 }
+
+add_action( 'woocommerce_before_single_product_summary', 'test_button' );
+function test_button() {
+	echo "<h1>TEXT DE TEST</h1>";
+}
