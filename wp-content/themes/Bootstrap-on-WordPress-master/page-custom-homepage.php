@@ -25,3 +25,5 @@ function style_define()
     'parts/shared/footer',
     'parts/shared/html-footer'
 )); ?>
+
+
