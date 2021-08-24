@@ -26,6 +26,8 @@ if (!is_user_logged_in()) {
     // 'parts/shared/header' 
 )); ?>
 
+<div class="custom-content-class">
+
 <form method="post" enctype="multipart/form-data">
     <?php
     //If user is an employee, display field for selecting the company to which he wants to add the product
@@ -88,6 +90,8 @@ if (!is_user_logged_in()) {
         <input type="submit" value="Add product">
     </div>
 </form>
+
+</div>
 
 <?php
 

@@ -9,6 +9,8 @@ if (is_user_logged_in()==false) {
 	// 'parts/shared/header' 
 ) ); ?>
 
+<div class="custom-content-class">
+
 <div class="content">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -19,6 +21,8 @@ if (is_user_logged_in()==false) {
 		<?php comments_template( '', true ); ?>
 
 	<?php endwhile; ?>
+</div>
+
 </div>
 
 <?php BsWp::get_template_parts( array( 

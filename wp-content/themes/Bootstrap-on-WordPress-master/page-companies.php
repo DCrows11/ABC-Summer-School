@@ -11,6 +11,8 @@ if (!isset($_GET['company'])) {
     // 'parts/shared/header' 
 )); ?>
 
+<div class="custom-content-class">
+
 <?php
 
 $companyId = $_GET['company'];
@@ -52,6 +54,9 @@ function displayProducts($products) {
 }
 
 ?>
+
+</div>
+
 <?php BsWp::get_template_parts(array(
     'parts/shared/footer',
     'parts/shared/html-footer'

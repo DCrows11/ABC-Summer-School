@@ -3,6 +3,8 @@
 	// 'parts/shared/header' 
 ) ); ?>
 
+<div class="custom-content-class">
+
 <?php
 
 echo "test";
@@ -22,6 +24,7 @@ echo '</ul>';
 
 ?>
 
+</div>
 
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/footer',

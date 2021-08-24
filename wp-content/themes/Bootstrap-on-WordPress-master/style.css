@@ -15,6 +15,11 @@ body.theme-Bootstrap-on-WordPress-master {
     background-size: 1920px 1080px;
 }
 
+.custom-content-class {
+    min-height: 900px;
+    padding: 20px;
+}
+
 .custom-site-footer-container {
     width: 100%;
     height: auto;

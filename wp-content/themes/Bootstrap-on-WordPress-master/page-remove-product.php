@@ -22,6 +22,8 @@
 	// 'parts/shared/header' 
 ) ); ?>
 
+<div class="custom-content-class">
+
 <?php
 
     $user = wp_get_current_user();
@@ -72,6 +74,8 @@
     }
     
 ?>
+
+</div>
 
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/footer',

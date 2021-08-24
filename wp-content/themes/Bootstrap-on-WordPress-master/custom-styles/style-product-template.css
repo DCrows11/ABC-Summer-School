@@ -1,6 +1,25 @@
 body.single-product {
-    color: red !important;
+    /* color: red !important; */
 
 
 
+}
+.content {
+    padding: 20px;
+}
+.delete-product-button {
+    position: absolute;
+    right: 50px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+}
+.delete-product-button button {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: red;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
 }
