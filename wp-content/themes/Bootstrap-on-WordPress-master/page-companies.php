@@ -8,7 +8,7 @@ if (!isset($_GET['company'])) {
 
 <?php BsWp::get_template_parts(array(
     'parts/shared/html-header',
-    // 'parts/shared/header' 
+    'parts/shared/header' 
 )); ?>
 
 <div class="custom-content-class">

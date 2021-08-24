@@ -22,5 +22,16 @@
 	</div>
 </nav> -->
 <?php
-echo do_shortcode("[hfe_template id='202']");
+$user = wp_get_current_user();
+if (in_array('customer', (array) $user->roles)) {
+	//Customer header
+	echo do_shortcode("[hfe_template id='202']");
+} else if (in_array('employee', (array) $user->roles)) {
+	//Employee header
+} else if (in_array('company', (array) $user->roles)) {
+	//Company header
+} else if (in_array('administrator', (array) $user->roles)) {
+	//Admin header
+} 
+
 ?>

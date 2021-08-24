@@ -27,7 +27,7 @@ if ($_GET['tab'] != "my-companies" && $_GET['tab'] != "sent-applications" && $_G
 
 <?php BsWp::get_template_parts(array(
     'parts/shared/html-header',
-    // 'parts/shared/header' 
+    'parts/shared/header' 
 )); ?>
 
 <div class="custom-content-class">
