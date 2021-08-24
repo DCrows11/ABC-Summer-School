@@ -20,6 +20,29 @@ body.theme-Bootstrap-on-WordPress-master {
     padding: 20px;
 }
 
+.header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;;
+    background-color: rgb(254, 193, 6);
+    padding: 8px;
+}
+
+.header-item {
+    background-color: rgb(254, 193, 6);
+    padding: 10px;
+    transition: all 300ms ease;
+}
+.header-item:hover {
+    background-color: rgb(255, 205, 70);
+}
+
+.header a {
+    color: rgb(12, 20, 28);
+    text-decoration: none;
+}
+
 .custom-site-footer-container {
     width: 100%;
     height: auto;

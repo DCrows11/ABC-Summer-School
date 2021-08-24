@@ -32,6 +32,61 @@ if (in_array('customer', (array) $user->roles)) {
 	//Company header
 } else if (in_array('administrator', (array) $user->roles)) {
 	//Admin header
-} 
-
+}
 ?>
+
+<!-- Handmade Header -->
+<div class="header">
+	<!-- First button (homepage) -->
+	<div class="header-item">
+		<a href="http://localhost" class="homepage-link">
+			<div class="site icon"></div>
+			Site icon (To be added)
+		</a>
+	</div>
+
+	<div class="header-item">
+		<a href="http://localhost/companies-list">
+			Companies list
+		</a>
+	</div>
+
+	<?php if (in_array('employee', (array) $user->roles) || in_array('company', (array) $user->roles)) : ?>
+		<div class="header-item">
+			<a href="http://localhost/add-product">
+				Add product
+			</a>
+		</div>
+	<?php endif; ?>
+
+	<?php if (in_array('customer', (array) $user->roles)) : ?>
+		<div class="header-item">
+			<a href="http://localhost/cart">
+				Cart
+			</a>
+		</div>
+	<?php endif; ?>
+
+	<?php if (in_array('employee', (array) $user->roles)) : ?>
+		<div class="header-item">
+			<a href="http://localhost/my-companies">
+				My companies
+			</a>
+		</div>
+	<?php endif; ?>
+
+	<?php if (in_array('company', (array) $user->roles)) : ?>
+		<div class="header-item">
+			<a href="http://localhost/my-employees">
+				My employees
+			</a>
+		</div>
+	<?php endif; ?>
+
+	<!-- Last button -->
+	<div class="header-item">
+		<a href="http://localhost/my-account">
+			My account
+		</a>
+	</div>
+</div>
