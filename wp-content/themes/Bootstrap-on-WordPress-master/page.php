@@ -16,7 +16,7 @@
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
-	// 'parts/shared/header' 
+	'parts/shared/header' 
 ) ); ?>
 
 <div class="content">
