@@ -22,4 +22,26 @@ body.single-product {
     border-radius: 5px;
     height: auto;
     width: auto;
+}body.single-product {
+    
+
+}
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+    background-color: rgb(254, 193, 6);
+    position: relative;
+    width: 45%;
+    height: 357px;
+    border-radius: 5px;
+    border: 2.5px solid black;
+    padding: 25px;
+}
+.price {
+    color: black;
+}
+.woocommerce-product-gallery__image {
+position: relative;
+overflow: hidden;
+left: 15px;
+border-radius: 5px;
+border: 2.5px solid black;
 }
