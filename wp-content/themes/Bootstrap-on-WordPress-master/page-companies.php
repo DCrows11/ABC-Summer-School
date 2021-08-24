@@ -38,14 +38,15 @@ function filterProducts($unfilteredProducts)
 }
 function displayProducts($products) {
     if (count($products) > 0) {
+        $displayProducts = "";
+
         echo "<h4>Company products:</h4>";
         echo "<div class=\"company-products-list\">";
             foreach ($products as $product) {
-                $product = get_post($product);
-                echo "<div class=\"company-products-list-box\">";
-                echo "<p><a href=\"http://localhost/product/$product->post_name\">$product->post_title</a></p>";
-                echo "</div>";
+                $displayProducts = $displayProducts . $product . ",";
             }
+        $displayProducts = "[products ids=\"" . $displayProducts . "\"]";
+        echo do_shortcode($displayProducts);
         echo "</div>";
     }
     else {
