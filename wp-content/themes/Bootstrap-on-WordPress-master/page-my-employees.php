@@ -30,6 +30,8 @@ if ($_GET['tab'] != "my-employees" && $_GET['tab'] != "received-applications") {
     // 'parts/shared/header' 
 )); ?>
 
+<div class="custom-content-class">
+
 <?php
 //Setting Variables
 $tab = $_GET['tab'];
@@ -144,6 +146,8 @@ function secondTab()
     }
 }
 ?>
+
+</div>
 
 <?php BsWp::get_template_parts(array(
     'parts/shared/footer',

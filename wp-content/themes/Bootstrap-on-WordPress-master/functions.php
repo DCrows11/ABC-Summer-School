@@ -307,7 +307,7 @@ function load_custom_product_style() {
 	wp_enqueue_style('product_css');
 }
 
-add_action('woocommerce_before_single_product_summary', 'delete_product_button');
+add_action('woocommerce_before_single_product', 'delete_product_button');
 function delete_product_button()
 {
 	if (is_user_logged_in()) {
@@ -316,30 +316,42 @@ function delete_product_button()
 		global $product;
 		$productId = $product->get_id();
 		$companyId = get_post_field( 'post_author', $productId );
-		echo "<h4>Id produs: $productId</h4>";
-		echo "<h4>Id companie: $companyId</h4>";
-
+		// echo "<h4>Id produs: $productId</h4>";
+		// echo "<h4>Id companie: $companyId</h4>";
+		
 		$canDeleteProduct = false;
-
+		
 		if (in_array('employee', (array) $user->roles)) {
 			$companies = (array)get_field( 'employed_to_companies_list', 'user_' . $userId );
 			if (in_array ( $companyId, $companies )) {
 				$canDeleteProduct = true;
 			}
 		}
-
+		
 		if ($userId == $companyId) {
 			$canDeleteProduct = true;
 		}
-
+		
 		if (in_array('administrator', (array) $user->roles)) {
 			$canDeleteProduct = true;
 		}
-
+		
 		if ($canDeleteProduct) : ?>
 
+		<div class="delete-product-button">
 			<a href="http://localhost/remove-product?r=<?php echo $productId; ?>"><button type="button">Remove Product</button></a>
+		</div>
 
 		<?php endif;
 	}
+}
+
+add_action('woocommerce_single_product_summary', 'sold_by_company');
+
+function sold_by_company() {
+	global $product;
+	$productId = $product->get_id();
+	$companyId = get_post_field( 'post_author', $productId );
+	$company = get_user_by('id', $companyId);
+	echo "<p>Sold by <a href=\"http://localhost/companies/?company=$company->id\">" . esc_html( $company->user_login ) . "</a></p>";
 }
