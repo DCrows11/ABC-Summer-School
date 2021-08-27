@@ -25,7 +25,7 @@
 $user = wp_get_current_user();
 if (in_array('customer', (array) $user->roles)) {
 	//Customer header
-	echo do_shortcode("[hfe_template id='202']");
+	// echo do_shortcode("[hfe_template id='202']");
 } else if (in_array('employee', (array) $user->roles)) {
 	//Employee header
 } else if (in_array('company', (array) $user->roles)) {
@@ -38,55 +38,70 @@ if (in_array('customer', (array) $user->roles)) {
 <!-- Handmade Header -->
 <div class="header">
 	<!-- First button (homepage) -->
-	<div class="header-item">
-		<a href="http://localhost" class="homepage-link">
-			<div class="site icon"></div>
-			Site icon (To be added)
+	<div class="header-homepage-icon">
+		<a href="http://localhost">
+			<img src="http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/images/favicon.svg" class="header-logo">
 		</a>
 	</div>
-
-	<div class="header-item">
-		<a href="http://localhost/companies-list">
-			Companies list
-		</a>
-	</div>
-
-	<?php if (in_array('employee', (array) $user->roles) || in_array('company', (array) $user->roles)) : ?>
+	<div class="header-buttons">
 		<div class="header-item">
-			<a href="http://localhost/add-product">
-				Add product
+			<a href="http://localhost">
+				Home
 			</a>
 		</div>
-	<?php endif; ?>
 
-	<?php if (in_array('customer', (array) $user->roles)) : ?>
 		<div class="header-item">
-			<a href="http://localhost/cart">
-				Cart
+			<a href="http://localhost/companies-list">
+				Companies list
 			</a>
 		</div>
-	<?php endif; ?>
 
-	<?php if (in_array('employee', (array) $user->roles)) : ?>
+		<?php if (in_array('employee', (array) $user->roles) || in_array('company', (array) $user->roles)) : ?>
+			<div class="header-item">
+				<a href="http://localhost/add-product">
+					Add product
+				</a>
+			</div>
+		<?php endif; ?>
+
+		<?php if (in_array('customer', (array) $user->roles)) : ?>
+			<div class="header-item">
+				<a href="http://localhost/cart">
+					Cart
+				</a>
+			</div>
+		<?php endif; ?>
+
+		<?php if (in_array('employee', (array) $user->roles)) : ?>
+			<div class="header-item">
+				<a href="http://localhost/my-companies">
+					My companies
+				</a>
+			</div>
+		<?php endif; ?>
+
+		<?php if (in_array('company', (array) $user->roles)) : ?>
+			<div class="header-item">
+				<a href="http://localhost/my-employees">
+					My employees
+				</a>
+			</div>
+		<?php endif; ?>
+
+		<!-- My account -->
 		<div class="header-item">
-			<a href="http://localhost/my-companies">
-				My companies
+			<a href="http://localhost/my-account">
+				My account
 			</a>
 		</div>
-	<?php endif; ?>
 
-	<?php if (in_array('company', (array) $user->roles)) : ?>
-		<div class="header-item">
-			<a href="http://localhost/my-employees">
-				My employees
-			</a>
-		</div>
-	<?php endif; ?>
-
-	<!-- Last button -->
-	<div class="header-item">
-		<a href="http://localhost/my-account">
-			My account
-		</a>
+		<!-- Notifications -->
+		<?php if (in_array('employee', (array) $user->roles) || in_array('company', (array) $user->roles)) : ?>
+			<div class="header-item">
+				<a>
+					Notifications
+				</a>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
