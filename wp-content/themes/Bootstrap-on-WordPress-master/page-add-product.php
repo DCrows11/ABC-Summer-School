@@ -53,12 +53,12 @@ if (!is_user_logged_in()) {
     <br>
     <div id="add-product-form-product-short-description">
         <label for="product-short-description">Short Description</label><br>
-        <input type="text" id="product-short-description" name="product-short-description" required><br>
+        <textarea id="product-short-description" name="product-short-description" required></textarea><br>
     </div>
     <br>
     <div id="add-product-form-product-long-description">
         <label for="product-long-description">Long Description</label><br>
-        <input type="text" id="product-long-description" name="product-long-description" required><br>
+        <textarea id="product-long-description" name="product-long-description" required></textarea><br>
     </div>
     <br>
     <div id="add-product-form-product-selling-price">
@@ -128,7 +128,7 @@ if (isset($_POST['product-name'])) {
         if (in_array('employee', (array) $user->roles)) {
             $productCompany = $_POST['product-company'];
         } else {
-            $productCompany = $user->id;
+            $productCompany = $user->ID;
         }
         //Create product object
         $product = new WC_Product_Simple();
@@ -146,8 +146,8 @@ if (isset($_POST['product-name'])) {
         $product->save();
         //Setting product author
         wp_update_post([
-            'id' => $product->get_id(),
-            'author' => $productCompany,
+            'ID' => $product->get_id(),
+            'post_author' => $productCompany,
         ]);
         //Setting the input price
         update_field('product_production_price', $productProductionPrice, $product->get_id());
@@ -162,7 +162,7 @@ if (isset($_POST['product-name'])) {
         $attachmentArgs = [
             'post_mime_type' => $postMimeType,
         ];
-        $attachmentId = wp_insert_attachment($attachmentArgs, $newImageName, $product->get_id());
+        $attachmentId = wp_insert_attachment($attachmentArgs, 'custom-product-images/' . $newImageName, $product->get_id());
 
         require_once(ABSPATH . 'wp-admin/includes/image.php');
         wp_update_attachment_metadata($attachmentId, wp_generate_attachment_metadata($attachmentId, "$uploads_dir/$newImageName"));
