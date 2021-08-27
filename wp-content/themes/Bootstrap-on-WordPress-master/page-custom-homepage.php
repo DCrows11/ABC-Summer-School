@@ -12,18 +12,18 @@ function style_define()
 
 <?php BsWp::get_template_parts(array(
     'parts/shared/html-header',
-    'parts/shared/header' 
+    'parts/shared/header'
 )); ?>
 
-<div class="homepage-shop-redirect-buttons">
-    <a href="localhost/weapons"><button class="homepage-weapons-redirect-button homepage-button"></button></a>
-    <a href="localhost/ammo"><button class="homepage-ammo-redirect-button homepage-button"></button></a>
-    <a href="localhost/accessories"><button class="homepage-accessories-redirect-button homepage-button"></button></a>
+<div class="homepage-content">
+    <div class="homepage-shop-redirect-buttons">
+        <a href="localhost/weapons"><button class="homepage-weapons-redirect-button homepage-button"></button></a>
+        <a href="localhost/ammo"><button class="homepage-ammo-redirect-button homepage-button"></button></a>
+        <a href="localhost/accessories"><button class="homepage-accessories-redirect-button homepage-button"></button></a>
+    </div>
 </div>
 
 <?php BsWp::get_template_parts(array(
     'parts/shared/footer',
     'parts/shared/html-footer'
 )); ?>
-
-
